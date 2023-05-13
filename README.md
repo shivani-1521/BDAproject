@@ -9,4 +9,4 @@ As climate change continues to dominate headlines, our topic modeling analysis c
 5. Run stock price API Kafka producer in another terminal as ```bash startProducerStocks.sh```
 6. Run news API Kafka producer in another terminal as ```bash startProducerNews.sh```
 7. Run Kafka consumer in another terminal as ```bash startConsumer.sh```
-8. Start Flask server as ```bash startFlaskServer.sh```. **Open the external IP address** as mentioned as soon as the Flask server starts. (Current value is http://34.125.95.198:5000/). The internal localhost IP address cannot be used in this case.
+8. Start Flask server as ```bash startFlaskServer.sh```. **Open the external IP address** mentioned as soon as the Flask server starts. (Current value is http://34.125.95.198:5000/). The internal localhost IP address cannot be used in this case.
