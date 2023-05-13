@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Climate Change News</title>
+        <style type="text/css">
+                body {
+                        font-family: sans-serif;
+                        background: white;
+            margin: 0;
+            overflow: hidden;
+                }
+                li{
+                        font-size: 12pt;
+                        padding: 5px;
+                        padding-right: 5px;
+                        color:white;
+                }
+                ul {
+            list-style-type: none;
+            color:white;
+                }
+                a{
+                        color:white;
+                        text-decoration: none;
+                }
+                a:focus{
+                        font-weight: bold;
+                }
+                a:hover{
+                        text-decoration: underline;
+                }
+                a.a2{
+                        color:white;
+                        background-color: #bd5d38;
+                        padding: 14px 25px;
+                        text-align: center;
+                        text-decoration: none;
+                        display: inline-block;
+                }
+                a.a2:hover{
+                        text-decoration: underline;
+                }
+                p.intro-news{
+                        font-size: 15pt;
+                        margin-left: 50px;
+                        margin-top: 40px;
+
+                }
+                img{
+                        width: 50%;
+                        height: 60%;
+                        margin-left: 180px;
+                        margin-right: 50px;
+                }
+                img.logo {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 50px;
+                }
+
+
+    #ABC {
+      background-color: #bd5d38;
+      height: 100%;
+      position: absolute;
+      
+      left: 0;
+      width: 15%;
+      padding-top: 50px;
+    }
+    
+    #DEF {
+      background-color: white;
+      font-family: Roboto;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 85%;
+          
+
+
+    </style>
+</head>
+<body>
+        <section id="ABC">
+<p>
+        <img class= "logo" src="{{url_for('static', filename='logo-1.jpeg')}}" style="width:250px">
+        <br><br>
+        <ul>
+                <li><a class = "a1" href="{{url_for('index', type='H')}}">Home</a></li>
+                <li><a class = "a1" href="{{url_for('show_topics', type='JKR')}}">Topics</a></li>
+                <li><a class = "a1" href="{{url_for('show_image', type='SK')}}">Topic Scores</a></li>
+                <li><a class = "a1" href="{{url_for('show_image_overTime', type='GCM')}}">Topics over time</a></li>
+                <li><a class = "a1" href="{{url_for('recent_news', type='JA')}}">Recent news</a></li>
+                <li><a class = "a1" href="{{url_for('heat_local', type='HJ')}}">Stock Market</a></li>
+        </ul>
+
+
+</p>
+</section>
+<section id="DEF"> 
+        <p class="p2">  
+            <p class = "intro-news"> Recent news on climate change </p>
+            <br><br> <br> 
+            
+            
+
+                <ul>
+                        {% for i in result %}
+                <li><a class = "a2" target="_blank" rel="noopener noreferrer" href=" {{ i['link'] }} ">{{ i['title'] }}</a></li>
+                {% endfor %}
+                </ul>
+
+        </p>
+</section>
+
+
+</body>
+</html>

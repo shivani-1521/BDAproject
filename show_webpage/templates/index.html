@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Climate Change News</title>
+        <style type="text/css">
+                body {
+                        font-family: sans-serif;
+                        background: white;
+            margin: 0;
+            overflow: hidden;
+                }
+                li{
+                        font-size: 12pt;
+                        padding: 5px;
+                        padding-right: 5px;
+                        color:white;
+                }
+                ul {
+            list-style-type: none;
+            color:white;
+                }
+                a:link{
+                        color:white;
+                        text-decoration: none;
+                }
+                a:hover{
+                        text-decoration: underline;
+                }
+                a:focus{
+                        font-weight: bold;
+                }
+                p.p1{
+                        font-size: 48pt;
+                        font-family: sans-serif;
+                        padding-left: 40px;
+                        padding-right: 40px;
+                }
+                p.p4{
+                        font-family: sans-serif;
+                        color:black;
+                        padding-left: 40px;
+                        padding-right: 40px;
+                }
+                a.a1{
+                        color : white;
+                }
+                img{
+                        width: 80%;
+                        height: 60%;
+                        margin-left: 135px;
+                        margin-top: 50px;
+                }
+                img.logo {
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                        margin-top: 50px;
+                }
+
+    #ABC {
+      background-color: #bd5d38;
+      height: 100%;
+      position: absolute;
+      
+      left: 0;
+      width: 15%;
+      padding-top: 50px;
+      
+    }
+    
+    #DEF {
+      background-color: white;
+      font-family: Roboto;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+
+      width: 85%;
+    }
+
+    </style>
+</head>
+<body>
+        <section id="ABC">
+<p>
+        <img class= "logo" src="{{url_for('static', filename='logo-1.jpeg')}}" style="width:250px">
+        <br><br>
+        <ul>
+                <li><a class = "a1" href="{{url_for('index', type='H')}}">Home</a></li>
+                <li><a class = "a1" href="{{url_for('show_topics', type='JKR')}}">Topics</a></li>
+                <li><a class = "a1" href="{{url_for('show_image', type='SK')}}">Topic Scores</a></li>
+                <li><a class = "a1" href="{{url_for('show_image_overTime', type='GCM')}}">Topics over time</a></li>
+                <li><a class = "a1" href="{{url_for('recent_news', type='JA')}}">Recent news</a></li>
+                <li><a class = "a1" href="{{url_for('heat_local', type='HJ')}}">Stock Market</a></li>
+        </ul>
+
+
+</p>
+</section>
+<section id="DEF"> <p class="p1"> <br>  Climate Change News Coverage </p> 
+
+        <p class="p4">
+        <i> Stay ahead of the curve with our climate change news coverage topic modeling. <br><br> Discover emerging trends and potential impacts on the stock market. <br><br>
+           Select a visualization to learn more.</i> </p>
+</section>
+
+</body>
+</html>
